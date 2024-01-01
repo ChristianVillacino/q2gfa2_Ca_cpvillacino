@@ -3,3 +3,84 @@
     padding: 0;
 }
 
+body{
+    background-color: black;
+}
+
+html{
+    overflow: hidden;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    top: 40vh;
+    font-size: xx-large;
+}
+
+section{
+    position: relative;
+    z-index: 2;
+}
+
+.bodies{
+    display: inline-block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#gaia{
+    width: 300px;
+    height: 300px;
+    background-image: url(media/gaia.gif);
+    animation: revolution 30s linear infinite;
+}
+
+#uranus{
+    width: 100px;
+    height: 100px;
+    background-image: url(media/uranus.gif);
+    animation: waves 50s linear infinite;
+}
+
+#helios{
+    width: 75px;
+    height: 75px;
+    background-image: url(media/helios.gif);
+    animation: helios 10s linear infinite;
+    left: 50vw;
+}
+
+#beelzebub{
+    width: 100px;
+    height: 100px;
+    background-image: url(media/beelzebub.gif);
+    animation: flight 600s linear infinite;
+    left: 56vw;
+}
+
+@keyframes revolution {
+    0%{transform: translate(-450px, 100px);}
+    100%{transform: translate(1300px, 100px);}
+}
+
+@keyframes waves {
+    0%{transform: matrix(1, 0, 0, 1, 0, 0);}
+    25%{transform: matrix(1.3, 0, 0, 1.3, 350, 500);}
+    50%{transform: matrix(1.8, 0, 0, 1.8, 400, -400);}
+    75%{transform: matrix(1.3, 0, 0, 1.3, -350, -500);}
+    100%{transform: matrix(1, 0, 0, 1, -1, 1);}
+}
+
+@keyframes helio {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+@keyframes flight {
+    0%{transform: scale(0.1);}
+    100%{transform: scale(5);}
+}
